@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { naturandom } from "../src/naturandom";
+import { naturandom } from "../dist/naturandom.es";
 
 describe("naturandom - Input Type Handling", () => {
   describe("When processing arrays", () => {

@@ -95,7 +95,13 @@ export const naturandom = <T>(
 
   const random = createSeededRandom(seed);
 
-  const clusterSize = Math.max(1, Math.floor(items.length * bias));
+  // Higher bias = smaller clusters (tighter grouping)
+  // Lower bias = larger clusters (more mixing)
+  const normalizedBias = Math.max(0, Math.min(1, bias)); // Ensure bias is between 0 and 1
+  const clusterSize = Math.max(
+    1,
+    Math.ceil(items.length * (1 - normalizedBias))
+  );
   const clusters = createClusters(items, clusterSize);
 
   const shuffledItems = shuffleWithRandom(

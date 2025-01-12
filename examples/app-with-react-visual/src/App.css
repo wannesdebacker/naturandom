@@ -1,0 +1,129 @@
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.grid__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.grid__label {
+  margin-bottom: 8px;
+}
+
+.grid__slider {
+  width: 250px;
+  margin-bottom: 8px;
+}
+
+.grid__button {
+  padding: 8px 16px;
+  margin-top: 8px;
+  background: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.grid__button:hover {
+  background: #2d3748;
+}
+
+.grid__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.grid__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid__section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.grid__matrix {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  color: black;
+}
+
+.grid__cell {
+  aspect-ratio: 1;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.grid__cell:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.grid__cell--sword {
+  background-color: #fed7d7;
+}
+
+.grid__cell--bow {
+  background-color: #c6f6d5;
+}
+
+.grid__cell--staff {
+  background-color: #bee3f8;
+}
+
+.grid__cell--dagger {
+  background-color: #feebc8;
+}
+
+.grid__cell--axe {
+  background-color: #e9d8fd;
+}
+
+.grid__cell--mace {
+  background-color: #fbd38d;
+}
+
+.grid__cell-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.grid__cell-type {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.grid__cell-tier {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
